@@ -1,7 +1,18 @@
 const express = require("express");
-const app = express();
 const { PORT } = require("./constants");
-app.get("/", (req, res) => {
-  res.send("Welcome to Express.");
-});
-app.listen(PORT, () => console.log(`App is listening on ${PORT}`));
+const expressConfig = require("./configs/expressConfig");
+const handlebarsConfig = require("./configs/handlebarsConfig");
+const mongooseConfig = require("./configs/mongooseConfig");
+
+const app = express();
+async function startApp(app) {
+  try {
+    expressConfig(app);
+    handlebarsConfig(app);
+    mongooseConfig(app);
+    app.listen(PORT, () => console.log(`Server is running on ${PORT}`));
+  } catch (error) {
+    console.log(error);
+  }
+}
+startApp(app);
