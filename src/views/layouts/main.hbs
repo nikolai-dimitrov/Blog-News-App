@@ -3,45 +3,59 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <script
+      src="https://kit.fontawesome.com/4820eb40be.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Main</title>
   </head>
   <body>
     <header>
-      <nav>
-        <ul>
-          <li>
+      <div class="title">
+        <p>Blog</p>
+        <p>News</p>
+      </div>
+      <nav class="nav">
+        <ul class="nav__anchors">
+          <li class="nav__item">
             <a href="/">Home</a>
           </li>
-          <li>
-            <a href="/">Jobs</a>
+          <li class="nav__item">
+            <a href="/">Publish</a>
           </li>
-          <li>
-            <a href="/">Publish Job</a>
-          </li>
-          <li>
-            <a href="/">About</a>
-          </li>
-          <li>
-            <a href="/">Login</a>
-          </li>
-          <li>
-            <a href="/">Register</a>
-          </li>
-          <li>
+          <li class="nav__item">
             <a href="/">Profile</a>
           </li>
-          <li>
+          <li class="nav__item">
             <a href="/">Logout</a>
           </li>
+          <li class="nav__item">
+            <a href="/">About</a>
+          </li>
+          <li class="nav__item">
+            <a href="/">Login</a>
+          </li>
+          <li class="nav__item">
+            <a href="/">Register</a>
+          </li>
         </ul>
+        <div class="nav_search-bar">
+          <input type="text" placeholder="Keyword"/>
+          <div class="nav__btn-container">
+            <button>
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
+        </div>
       </nav>
     </header>
     {{{body}}}
     <footer>
       <div class="footer">
-        <span class="footer-section">
-          © 2023 House Keeping Manager 
-        </span>
+        <p class="footer-section">
+          © 2023 Blog News App
+        </p>
       </div>
     </footer>
   </body>
