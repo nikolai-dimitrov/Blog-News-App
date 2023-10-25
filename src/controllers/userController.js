@@ -1,13 +1,13 @@
 const router = require("express").Router();
 
 router.get("/login", (req, res) => {
-  res.send("Login page");
+  res.render("users/login");
 });
 
 router.post("/login", (req, res) => {});
 
 router.get("/register", (req, res) => {
-  res.send("Register page");
+  res.render("users/register");
 });
 
 router.post("/register", (req, res) => {});
